@@ -12,7 +12,7 @@ RSpec.describe HouseFacade do
 
   describe 'Clas Methods' do
     it '.house' do
-      @facade.house = @house
+      expect(@facade.house).to eq(@house)
     end
 
     it '.students' do
@@ -32,9 +32,9 @@ RSpec.describe HouseFacade do
                         "updated_at": "2019-03-30T17:47:41.202Z"
                     }
                   ]
-                  
+
       expect(@facade.students.count).to eq(22)
-      expect(@facade.students.first).to eq(student[0])
+      expect(@facade.students.first).to eq(students[0])
     end
   end
 end
