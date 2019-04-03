@@ -6,14 +6,11 @@ class HouseFacade
   end
 
   def students
-    conn = Faraday.new(:url => 'http://hogwarts-it.herokuapp.com/api/v1') do |faraday|
-      faraday.params['api_key'] = ENV['key']
-      faraday.adapter  Faraday.default_adapter
-    end
+    service.house_students(@house)
+  end
 
-    response = conn.get("house/#{@house}")
-
-    JSON.parse(response.body, symbolize_names: true)[:data].first[:attributes][:students]
+  def service
+    HogwartsService.new
   end
 
 end
