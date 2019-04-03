@@ -5,6 +5,7 @@ class HouseFacade
     @house = house
   end
 
-  
+  def students
+  end
 
 end
