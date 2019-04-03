@@ -8,8 +8,7 @@ RSpec.describe 'As a user' do
       visit '/'
 
       #And I select "Slytherin" from the dropdown
-      select 'Slytheirn', :from => :house
-      select 'Slytherin'
+      select 'Slytherin', :from => :house
 
       #And I click on "Get Students"
       click_on 'Get Students'
