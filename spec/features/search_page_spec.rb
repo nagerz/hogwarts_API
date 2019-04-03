@@ -25,9 +25,9 @@ RSpec.describe 'As a user' do
       expect(page).to have_css(".student", count: 22)
 
       #And I should see a name and id for each student.
-      within(first(".member")) do
-        expect(page).to have_css(".name")
-        expect(page).to have_css(".id")
+      within(first(".student")) do
+        expect(page).to have_content("Gormlaith Gaunt")
+        expect(page).to have_content("52")
       end
     end
   end

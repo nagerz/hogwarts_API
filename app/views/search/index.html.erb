@@ -1,3 +1,6 @@
 <h1><%= facade.house %> House:</h1>
 
 <h3><%= facade.students.count %> Students</h3>
+<% facade.students.each do |student| %>
+  <p class='student'> <%= student.name %> - <%= student.id %> </p>
+<% end %>

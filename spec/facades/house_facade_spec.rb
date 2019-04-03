@@ -34,7 +34,8 @@ RSpec.describe HouseFacade do
                   ]
 
       expect(@facade.students.count).to eq(22)
-      expect(@facade.students.first).to eq(students[0])
+      expect(@facade.students.first.name).to eq("Gormlaith Gaunt")
+      expect(@facade.students.first.id).to eq(52)
     end
   end
 end

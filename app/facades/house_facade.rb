@@ -6,7 +6,10 @@ class HouseFacade
   end
 
   def students
-    service.house_students(@house)
+    student_data = service.house_students(@house)
+    student_data.map do |data|
+      Student.new(data)
+    end
   end
 
   def service
