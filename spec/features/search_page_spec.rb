@@ -14,7 +14,8 @@ RSpec.describe 'As a user' do
       click_on 'Get Students'
 
       #Then my path should be "/search" with "house=slytherin" in the parameters
-      expect(current_path).to eq('/search?house=slytherin')
+      expect(current_path).to eq(search_path)
+      expect(current_url).to include('house=Slytherin')
 
       #And I should see a message "22 Students"
       expect(page).to have_content('Slytherin House:')
